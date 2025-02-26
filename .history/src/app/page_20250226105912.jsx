@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from "./page.module.scss";
 import Feature from './components/Feature';
 import Popup from './components/popup';
+import { useState } from "react";
 
 const features = [
   {

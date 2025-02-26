@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import styles from "./page.module.scss";
 import Feature from './components/Feature';
-import Popup from './components/popup';
 
 const features = [
   {
@@ -24,6 +23,7 @@ const features = [
 
 export default function Home() {
 
+
   return (
     <div className={styles.landingPage}>
 
@@ -43,8 +43,24 @@ export default function Home() {
         <a className={styles.more} href="">Xem thêm đặc quyền <Image src="/images/arrow.svg" alt="image" width={12} height={12} /> </a>
       </div>
 
-      <button type="button" className={styles.btnSubmit}>Nhận gói Plus miễn phí</button>
-      <Popup />
+      <button type="button" className={styles.btnSubmit} onClick={() => setIsOpen(true)}>Nhận gói Plus miễn phí</button>
+      
+      {isOpen && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h2 className="text-lg font-bold">Popup Title</h2>
+            <p>This is a simple popup in Next.js!</p>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

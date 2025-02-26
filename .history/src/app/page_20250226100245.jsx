@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import styles from "./page.module.scss";
 import Feature from './components/Feature';
-import Popup from './components/popup';
 
 const features = [
   {
@@ -24,6 +23,7 @@ const features = [
 
 export default function Home() {
 
+
   return (
     <div className={styles.landingPage}>
 
@@ -42,9 +42,7 @@ export default function Home() {
         ))}
         <a className={styles.more} href="">Xem thêm đặc quyền <Image src="/images/arrow.svg" alt="image" width={12} height={12} /> </a>
       </div>
-
       <button type="button" className={styles.btnSubmit}>Nhận gói Plus miễn phí</button>
-      <Popup />
     </div>
   );
 }
