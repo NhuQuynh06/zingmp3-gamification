@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import Image from "next/image";
 import styles from "./page.module.scss";
 import Feature from "./components/Feature";
@@ -42,7 +43,13 @@ const features = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+
+  // call api check user login
+  const res = await fetch("http://localhost:3000/api/user");
+  const data = await res.json();
+  const isLoggedIn = !!data.user.id;
+
   return (
     <div className={styles.landingPage}>
       <Image
@@ -73,7 +80,16 @@ export default function Home() {
           <Feature key={i} {...item} />
         ))}
       </div>
-      <Popup />
+
+      {isLoggedIn ? (<>
+        <Popup />
+      </>
+      ) : (
+        <button className={styles.button}>
+          Đăng nhập để nhận gói Plus miễn phí
+        </button>
+      )}
+
     </div>
   );
 }

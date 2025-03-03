@@ -6,10 +6,11 @@ export default function Popup() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <>
       {/* Button to Open Popup */}
       <button onClick={() => setIsOpen(true)} className={styles.button}>
         Nhận gói Plus miễn phí
+        {/* check api xem user có đủ đk nhận gói hay không */}
       </button>
 
       {/* Popup Content */}
@@ -18,6 +19,6 @@ export default function Popup() {
           <button onClick={() => setIsOpen(false)}>Close</button>
         </div>
       )}
-    </div>
+    </>
   );
 }
