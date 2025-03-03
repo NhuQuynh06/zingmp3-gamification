@@ -1,0 +1,49 @@
+:root {
+  --foreground: #8939FF;
+  --text-color: #ffffff;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  
+} 
+
+/* INFO : add font*/
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../../public/fonts/sf-pro-display/bold.otf') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../../public/fonts/sf-pro-display/regular.otf') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* INFO : css global */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  /* background: var(--foreground); */
+  /* color: var(--text-color); */
+  font-family: 'SFProDisplay', sans-serif;
+  font-weight: var(--font-weight-normal);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
