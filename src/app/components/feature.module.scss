@@ -1,11 +1,45 @@
-.item {
+.featureWrapper {
+    height: calc(100vh - 270px);
+    overflow-y: scroll;
+    margin: 0 -36px;
+    padding-bottom: 160px;
 
-    .text {
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 4px transparent;
+        border-radius: 6px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 2px;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        background-color: transparent;
+    }
+
+    .featureImg {
+        margin-bottom: 8px;
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
         font-weight: var(--font-weight-medium);
         font-size: 22px;
         text-align: center;
         color: #ffffff;
         max-width: 350px;
-        margin: 0 auto;
+        margin: 0 auto 50px auto;
+    }
+
+    .textDecor {
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 70px;
+        text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+            1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
     }
 }
