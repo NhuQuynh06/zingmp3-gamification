@@ -49,7 +49,8 @@ export default async function Home() {
   const data = await res.json();
   const id = !!data.user.id;
   const isSuccess = !!data.user.isSuccess;
-  console.log("id", id, "isSuccess", isSuccess);
+  const isLogin = !!data.user.isLogin;
+  console.log("id", id, "isSuccess", isSuccess, isLogin isLogin);
 
   return (
     <>
@@ -57,7 +58,7 @@ export default async function Home() {
         <p>Nhận gói Plus miễn phí</p>
       ) : isSuccess === false ? (
         <p>Không đủ điều kiện nhận gói Plus</p>
-      ) : id === false (
+      ) :  (
         <p>Đăng nhập để nhận gói Plus miễn phí</p>
       )}
     </>

@@ -3,7 +3,8 @@ import { NextResponse } from "next/server";
 // Simulated user data (Replace this with a real database or authentication check)
 const mockUser = {
   id: "1",
-  isSuccess: true,
+  isSuccess: true, 
+  // isLogin : false, 
 };
 
 export async function GET() {

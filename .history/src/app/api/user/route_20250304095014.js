@@ -2,8 +2,13 @@ import { NextResponse } from "next/server";
 
 // Simulated user data (Replace this with a real database or authentication check)
 const mockUser = {
-  id: "1",
-  isSuccess: true,
+  id: 1,
+  name: "John Doe",
+  email: "johndoe@example.com",
+  role: "admin",
+  login: true, // đã login hay chưa
+  isSuccess: true, // có thỏa mãn đk hay
+  mess
 };
 
 export async function GET() {

@@ -8,7 +8,7 @@ export default function Popup() {
   return (
     <>
       <button onClick={() => setIsOpen(true)} className={styles.button}>
-        Nhận gói Plus miễn phí
+        Nhận gói Plus miễn phí ( chưa loggin)
       </button>
 
       {/* Popup Content */}

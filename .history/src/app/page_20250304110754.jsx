@@ -47,17 +47,16 @@ export default async function Home() {
   // call api check user login
   const res = await fetch("http://localhost:3000/api/user");
   const data = await res.json();
-  const id = !!data.user.id;
+  const isLoggedIn = !!data.user.id;
   const isSuccess = !!data.user.isSuccess;
-  console.log("id", id, "isSuccess", isSuccess);
 
   return (
     <>
-      {id && isSuccess ? (
+      {isLoggedIn && isSuccess ? (
         <p>Nhận gói Plus miễn phí</p>
-      ) : isSuccess === false ? (
+      ) : isSuccess == false ? (
         <p>Không đủ điều kiện nhận gói Plus</p>
-      ) : id === false (
+      ) : isLoggedIn === "" (
         <p>Đăng nhập để nhận gói Plus miễn phí</p>
       )}
     </>

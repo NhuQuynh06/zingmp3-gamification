@@ -57,7 +57,7 @@ export default async function Home() {
         <p>Nhận gói Plus miễn phí</p>
       ) : isSuccess === false ? (
         <p>Không đủ điều kiện nhận gói Plus</p>
-      ) : id === false (
+      ) : (
         <p>Đăng nhập để nhận gói Plus miễn phí</p>
       )}
     </>
