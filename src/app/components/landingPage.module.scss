@@ -27,7 +27,7 @@
 
     .text {
         max-width: 350px;
-        margin-bottom: 24px;
+        margin: 0 auto 24px auto;
         font-size: 16px;
         line-height: 22px;
         text-align: center;
@@ -42,9 +42,6 @@
         left: 0;
         padding-top: 68px;
         background: linear-gradient(to top, rgba(64, 33, 105, 1), rgba(88, 54, 144, 0.6), rgba(114, 77, 187, 0));
-        // display: grid;
-        // align-items: center;
-        // justify-content: center;
     }
 
     .btnSubmit {

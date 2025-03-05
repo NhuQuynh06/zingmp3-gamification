@@ -2,11 +2,10 @@
 import Image from "next/image";
 import Feature from "./Feature";
 import styles from "./landingPage.module.scss"
+import Modal from "./Modal";
 
-export default function LandingPage() {
-    const handleClick = () => {
-        console.log("show popup")
-    };
+export default function LandingPage({ id, isSuccess, message }) {
+    console.log(id, isSuccess, message);
     return (
         <>
             <div className={styles.landingPage}>
@@ -33,12 +32,13 @@ export default function LandingPage() {
                 </p>
                 <Feature />
                 <div className={styles.btnWrapper}>
-                    <button className={styles.btnSubmit} onClick={handleClick}>
-                        Nhận gói Plus miễn phí
+                    <button className={styles.btnSubmit}>
+                        {message}
                     </button>
                 </div>
 
             </div>
+            {id && <Modal isSuccess={isSuccess} />}
         </>
     )
 }

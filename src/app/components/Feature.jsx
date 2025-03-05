@@ -40,18 +40,17 @@ const featuresList = [
         content: "Mở rộng khả năng Upload ",
     },
 ];
+
 export default function Feature() {
     return (
         <div className={styles.featureWrapper}>
             {featuresList.map((item, i) => (
                 <Fragment key={i} >
                     <img className={styles.featureImg} src={item.img} alt="image" />
-                    {/* <Image className={styles.featureImg} src={item.img} alt="image" width={390} height={390} /> */}
                     <p className={styles.content}>{item.content}</p>
-
                 </Fragment>
             ))}
-            <p className={styles.textDecor}>Zing MP3 Plus</p>
+            <img className={styles.textDecor} src="/images/zingmp3.png" alt="" />
         </div >
     );
 };

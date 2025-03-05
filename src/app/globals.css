@@ -35,6 +35,7 @@ body {
   /* color: var(--text-color); */
   font-family: 'SFProDisplay', sans-serif;
   font-weight: var(--font-weight-normal);
+  position: relative;
 }
 
 * {

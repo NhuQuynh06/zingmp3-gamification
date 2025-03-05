@@ -1,0 +1,78 @@
+.modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    .modalDialog {
+        background-color: #ffffff;
+        width: 330px;
+        text-align: center;
+        border-radius: 20px;
+        padding: 52px 10px;
+
+        .title {
+            font-weight: var(--font-weight-semibold);
+            font-size: 22px;
+            line-height: 28px;
+            margin-bottom: 8px;
+            color: rgba(26, 26, 26, 0.8);
+        }
+
+        .des {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 24px;
+            color: rgba(26, 26, 26, 0.8);
+            max-width: 310px;
+        }
+
+        .btnSubmit {
+            background: rgba(134, 71, 235, 1);
+            color: #ffffff;
+            width: 238px;
+            height: 44px;
+            font-weight: var(--font-weight-semibold);
+            font-size: 16px;
+            line-height: 24px;
+            display: block;
+            margin: 0 auto 12px auto;
+            border-radius: 50px;
+            border: none;
+        }
+
+        &.success {
+            background: url('../../../public/images/decor.png') center bottom/230px no-repeat, rgba(137, 57, 255, 1);
+            min-height: 450px;
+
+            .title {
+                color: #ffffff;
+            }
+
+            .des {
+                color: #ffffff;
+            }
+
+            .btnSubmit {
+                background: rgba(253, 198, 36, 1);
+                color: rgba(52, 34, 79, 1);
+            }
+
+            .link {
+                font-weight: var(--font-weight-medium);
+                font-size: 16px;
+                line-height: 24px;
+                text-decoration: underline;
+                display: block;
+                color: #ffffff;
+            }
+        }
+
+    }
+
+}
